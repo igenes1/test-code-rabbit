@@ -1,0 +1,65 @@
+# Archivo de configuración de CodeRabbit para Node.js + React Native
+
+project:
+  name: test-code-rabbit
+  language: javascript
+  version: 1.0
+
+# Reglas de revisión de código
+rules:
+
+  formatting:
+    enabled: true
+    style: prettier          # Usa Prettier para formato
+    max-line-length: 120
+    tab-width: 2
+    semi: true
+    single-quote: true
+    trailing-comma: all
+
+  naming-conventions:
+    enabled: true
+    variable-case: camelCase
+    function-case: camelCase
+    class-case: PascalCase
+    constant-case: UPPER_CASE
+
+  security:
+    enabled: true
+    no-hardcoded-secrets: true
+    no-eval: true
+    no-inner-html: true
+    avoid-dangerous-functions: true
+
+  best-practices:
+    enabled: true
+    avoid-global-variables: true
+    prefer-const-over-let: true
+    no-unused-vars: true           # Detecta variables no usadas
+    no-console-in-production: true # Evita console.log en producción
+    strict-mode: true
+    require-jsdoc: false
+
+  complexity:
+    enabled: true
+    max-cyclomatic-complexity: 10
+    max-nested-depth: 4
+    max-params: 4
+
+# Integración con Git / CI
+ci:
+  enabled: true
+  pre-commit: true
+  branch-policy:
+    enforce-on-master: true
+    allow-on-feature-branches: true
+  auto-lint: true
+
+# Inteligencia Artificial para sugerencias de refactor
+ai:
+  enabled: true
+  suggestions: true
+  auto-fix: false       # Cambialo a true si querés que intente corregir automáticamente
+  detect-duplicates: true
+  improve-complexity: true
+  unused-variable-fix: true  # Sugiere o corrige variables no usadas
