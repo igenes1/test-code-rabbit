@@ -59,7 +59,7 @@ ci:
 ai:
   enabled: true
   suggestions: true
-  auto-fix: false       # Cambialo a true si querés que intente corregir automáticamente
+  auto-fix: true     # Cambialo a true si querés que intente corregir automáticamente
   detect-duplicates: true
   improve-complexity: true
   unused-variable-fix: true  # Sugiere o corrige variables no usadas
